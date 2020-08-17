@@ -1,9 +1,11 @@
 import { ExcelComponent } from "../../core/ExcelComponent";
 
 export class Table extends ExcelComponent {
+  // будем иметь доступ без создания инстанса данного класса поэтому static
   static className() {
     return `excel__table`
   }
+  // перезатираем родительский toHTML
   toHTML() {
     return `<div class="row">
     <div class="row_info"></div>
